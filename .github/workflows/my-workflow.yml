@@ -36,11 +36,8 @@ jobs:
       - name: List project root files
         run: dir
 
-      - name: List target folder
-        run: dir target
-
       - name: List allure-results folder
-        run: dir target/allure-results
+        run: dir allure-results
 
       - name: Install Allure CLI
         run: |
@@ -50,10 +47,13 @@ jobs:
 
       - name: Generate Allure Report
         run: |
-          allure generate target/allure-results -o allure-report --clean
+          allure generate allure-results -o allure-report --clean
+
+      - name: List generated Allure Report
+        run: dir allure-report
 
       - name: Upload Allure Report
         uses: actions/upload-artifact@v4
         with:
           name: allure-report
-          path: target/allure-report
+          path: allure-report
