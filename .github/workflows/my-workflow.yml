@@ -33,11 +33,6 @@ jobs:
       - name: Running Tests
         run: mvn clean test
 
-      - name: List project root files
-        run: dir
-
-      - name: List allure-results folder
-        run: dir allure-results
 
       - name: Install Allure CLI
         run: |
@@ -49,17 +44,9 @@ jobs:
         run: |
           allure generate allure-results -o allure-report --clean
 
-      - name: List generated Allure Report
-        run: dir allure-report
-
       - name: Upload Allure Report
         uses: actions/upload-artifact@v4
         with:
           name: allure-report
           path: allure-report
 
-      - name: Upload Allure Results
-        uses: actions/upload-artifact@v4
-        with:
-          name: allure-results
-          path: allure-results

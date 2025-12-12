@@ -13,10 +13,10 @@ public class TestBase {
 
 
     public static void initialize() {
-//        if (isFirstRun) {
-//            cleanAllureResults();
-//            isFirstRun = false;
-//        }
+        if (isFirstRun) {
+            cleanAllureResults();
+            isFirstRun = false;
+        }
         if (!isUserGenerated) {
             UserDataHelper userHelper = new UserDataHelper();
             testUser = userHelper.generateUser();
@@ -25,13 +25,13 @@ public class TestBase {
         String browser = ConfigReader.getProperty("browser");
         DriverFactory.initDriver(browser);
     }
-//    private static void cleanAllureResults() {
-//        File allureResults = new File("allure-results");
-//        if (allureResults.exists() && allureResults.isDirectory()) {
-//            for (File file : allureResults.listFiles()) {
-//                file.delete();
-//            }
-//        }
-//    }
+    private static void cleanAllureResults() {
+        File allureResults = new File("allure-results");
+        if (allureResults.exists() && allureResults.isDirectory()) {
+            for (File file : allureResults.listFiles()) {
+                file.delete();
+            }
+        }
+    }
 
     }
