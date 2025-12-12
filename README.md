@@ -67,59 +67,57 @@ After downloading and extracting, run:
 allure open allure-report
 
 ## 🧱 Project Structure
-.
+~~~
 ├── .github
-│   └── workflows
-│       └── my-workflow.yml
-│
+│ └── workflows
+│ └── my-workflow.yml
 ├── pom.xml
-│
 └── src
 ├── main
-│   ├── java
-│   │   ├── core
-│   │   │   ├── DriverFactory.java
-│   │   │   └── TestBase.java
-│   │   │
-│   │   ├── pages
-│   │   │   ├── BasePage.java
-│   │   │   ├── HomePage.java
-│   │   │   ├── LandingPage.java
-│   │   │   ├── RegistrationPage.java
-│   │   │   └── SignInPage.java
-│   │   │
-│   │   └── utils
-│   │       ├── ConfigReader.java
-│   │       ├── UserDataHelper.java
-│   │       └── WaitUtils.java
-│   │
-│   └── resources
-│       ├── config
-│       │   └── config.properties
-│       │
-│       └── testData
-│           └── testdata.json
+│ ├── java
+│ │ ├── core
+│ │ │ ├── DriverFactory.java
+│ │ │ └── TestBase.java
+│ │ │
+│ │ ├── pages
+│ │ │ ├── BasePage.java
+│ │ │ ├── HomePage.java
+│ │ │ ├── LandingPage.java
+│ │ │ ├── RegistrationPage.java
+│ │ │ └── SignInPage.java
+│ │ │
+│ │ └── utils
+│ │ ├── ConfigReader.java
+│ │ ├── UserDataHelper.java
+│ │ └── WaitUtils.java
+│ │
+│ └── resources
+│ ├── config
+│ │ └── config.properties
+│ │
+│ └── testData
+│ └── testdata.json
 │
 └── test
 ├── java
-│   ├── hooks
-│   │   └── Hooks.java
-│   │
-│   ├── runners
-│   │   └── TestRunner.java
-│   │
-│   └── stepdefinitions
-│       ├── CartSteps.java
-│       ├── CommonSteps.java
-│       ├── LoginSteps.java
-│       └── RegisterSteps.java
+│ ├── hooks
+│ │ └── Hooks.java
+│ │
+│ ├── runners
+│ │ └── TestRunner.java
+│ │
+│ └── stepdefinitions
+│ ├── CartSteps.java
+│ ├── CommonSteps.java
+│ ├── LoginSteps.java
+│ └── RegisterSteps.java
 │
 └── resources
 └── features
 ├── add_to_cart.feature
 ├── createAccount.feature
 └── login.feature
-
+~~~
 
 ## ▶️ How to Run Locally
 
