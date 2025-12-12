@@ -14,6 +14,7 @@ public class DriverFactory {
                 case "chrome":
                     ChromeOptions options = new ChromeOptions();
                     options.addArguments("--start-maximized");
+                    options.addArguments("--headless");
                     driver = new ChromeDriver(options);
                     break;
 

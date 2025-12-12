@@ -1,0 +1,44 @@
+name: E2E Regression
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+  schedule:
+    - cron: '00 21 * * *'
+  workflow_dispatch:
+
+jobs:
+  chrome_windows_Test:
+    runs-on: windows-latest
+    permissions:
+      checks: write
+    steps:
+      - name: checkout Code
+        uses: actions/checkout@v5
+
+      - name: setup java
+        uses: actions/setup-java@v5
+        with:
+          distribution: 'zulu'
+          java-version: '21'
+
+      - name: setup maven
+        uses: stCarolas/setup-maven@v5
+        with:
+          maven-version: 3.9.11
+
+      - name: Running Tests
+        run: mvn clean test
+
+      - name: Generate Allure Report
+        run: |
+          allure generate ./allure-results -o allure-report --clean
+
+      - name: Upload Allure Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-report
+          path: allure-report
