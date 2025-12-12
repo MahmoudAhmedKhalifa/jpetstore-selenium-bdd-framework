@@ -67,7 +67,7 @@ After downloading and extracting, run:
 allure open allure-report
 
 ## 🧱 Project Structure
-│
+.
 ├── .github
 │   └── workflows
 │       └── my-workflow.yml
@@ -119,6 +119,7 @@ allure open allure-report
 ├── add_to_cart.feature
 ├── createAccount.feature
 └── login.feature
+
 
 ## ▶️ How to Run Locally
 
