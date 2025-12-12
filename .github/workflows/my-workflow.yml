@@ -1,4 +1,4 @@
-name: JPetStore Automation
+name: JPetStore E2E Automation
 on:
   push:
     branches:
