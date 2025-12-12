@@ -35,7 +35,8 @@ jobs:
 
       - name: Install Allure CLI
         run: |
-          choco install allure -y
+          iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
+          scoop install allure
           allure --version
 
       - name: Generate Allure Report
