@@ -33,6 +33,11 @@ jobs:
       - name: Running Tests
         run: mvn clean test
 
+      - name: Install Allure CLI
+        run: |
+          choco install allure -y
+          allure --version
+
       - name: Generate Allure Report
         run: |
           allure generate ./allure-results -o allure-report --clean
