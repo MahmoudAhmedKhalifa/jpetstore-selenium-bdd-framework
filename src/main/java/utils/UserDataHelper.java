@@ -15,7 +15,6 @@ public class UserDataHelper {
 
     private Map<String, String> currentUser;
 
-    // توليد بيانات مستخدم كاملة
     public Map<String, String> generateUser() {
         currentUser = new HashMap<>();
 
