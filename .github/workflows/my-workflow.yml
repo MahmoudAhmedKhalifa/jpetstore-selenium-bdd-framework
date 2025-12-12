@@ -1,4 +1,4 @@
-name: E2E Regression
+name: JPetStore Automation
 on:
   push:
     branches:
