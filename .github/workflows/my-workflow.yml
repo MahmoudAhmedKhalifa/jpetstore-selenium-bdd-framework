@@ -33,6 +33,15 @@ jobs:
       - name: Running Tests
         run: mvn clean test
 
+      - name: List project root files
+        run: dir
+
+      - name: List target folder
+        run: dir target
+
+      - name: List allure-results folder
+        run: dir target/allure-results
+
       - name: Install Allure CLI
         run: |
             Invoke-WebRequest -Uri https://github.com/allure-framework/allure2/releases/download/2.36.0/allure-2.36.0.zip -OutFile allure.zip
