@@ -7,6 +7,6 @@ Feature: Add Product to Cart
     Given user is on the Pet Store landing page
 
   Scenario: Successfully add a product to the cart
-    When user select category
-    And user select product
-    Then user select item and added it to cart
+    When user select category "FISH"
+    And user select product "Angelfish"
+    Then user select item "Large Angelfish" and added it to cart
